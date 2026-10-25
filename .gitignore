@@ -1,0 +1,18 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Generated demonstration outputs
+offline_demo/
+my_live_demo/
+recorded_structural_check.json
+recorded_physical_check.json
+
+# Credentials and environment files
+.env
+.env.*
+!.env.example
+*secrets*

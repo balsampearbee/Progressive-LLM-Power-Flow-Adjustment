@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "scenario_id": "mixed_full_demo",
+  "description": "Single severe modified IEEE 39-bus demonstration scenario for staged active/reactive power-flow restoration.",
+  "source_note": "Derived from a synthetic perturbed IEEE 39-bus scenario. Proprietary DSP source files are not required at runtime.",
+  "monitoring": {
+    "voltage_bus_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "vmin_pu": 0.95,
+    "vmax_pu": 1.05,
+    "slack_bus_id": 39,
+    "slack_pmin_mw": 0.0,
+    "slack_pmax_mw": 1100.0
+  },
+  "solver": {
+    "algorithm": "NR",
+    "tolerance": 1e-08,
+    "maximum_iterations": 30,
+    "enforce_q_limits": false
+  },
+  "bus_loads": [
+    {
+      "bus_id": 1,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 2,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 3,
+      "pd_mw": 277.8,
+      "qd_mvar": 1.263
+    },
+    {
+      "bus_id": 4,
+      "pd_mw": 672.7,
+      "qd_mvar": 766.4
+    },
+    {
+      "bus_id": 5,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 6,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 7,
+      "pd_mw": 327.8,
+      "qd_mvar": 172.5
+    },
+    {
+      "bus_id": 8,
+      "pd_mw": 674.5,
+      "qd_mvar": 1035.0
+    },
+    {
+      "bus_id": 9,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 10,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 11,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 12,
+      "pd_mw": 7.387,
+      "qd_mvar": 462.1
+    },
+    {
+      "bus_id": 13,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 14,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 15,
+      "pd_mw": 320.0,
+      "qd_mvar": 153.0
+    },
+    {
+      "bus_id": 16,
+      "pd_mw": 455.8,
+      "qd_mvar": 153.4
+    },
+    {
+      "bus_id": 17,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 18,
+      "pd_mw": 158.0,
+      "qd_mvar": 30.0
+    },
+    {
+      "bus_id": 19,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 20,
+      "pd_mw": 618.5,
+      "qd_mvar": 539.7
+    },
+    {
+      "bus_id": 21,
+      "pd_mw": 274.0,
+      "qd_mvar": 115.0
+    },
+    {
+      "bus_id": 22,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 23,
+      "pd_mw": 273.6,
+      "qd_mvar": 214.0
+    },
+    {
+      "bus_id": 24,
+      "pd_mw": 335.8,
+      "qd_mvar": -283.0
+    },
+    {
+      "bus_id": 25,
+      "pd_mw": 224.0,
+      "qd_mvar": 47.2
+    },
+    {
+      "bus_id": 26,
+      "pd_mw": 139.0,
+      "qd_mvar": 17.0
+    },
+    {
+      "bus_id": 27,
+      "pd_mw": 260.4,
+      "qd_mvar": 193.9
+    },
+    {
+      "bus_id": 28,
+      "pd_mw": 224.2,
+      "qd_mvar": 156.5
+    },
+    {
+      "bus_id": 29,
+      "pd_mw": 268.6,
+      "qd_mvar": 88.86
+    },
+    {
+      "bus_id": 30,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 31,
+      "pd_mw": 9.2,
+      "qd_mvar": 4.6
+    },
+    {
+      "bus_id": 32,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 33,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 34,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 35,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 36,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 37,
+      "pd_mw": 0.0,
+      "qd_mvar": 100.0
+    },
+    {
+      "bus_id": 38,
+      "pd_mw": 0.0,
+      "qd_mvar": 0.0
+    },
+    {
+      "bus_id": 39,
+      "pd_mw": 1065.0,
+      "qd_mvar": 1066.0
+    }
+  ],
+  "generator_pg": [
+    {
+      "bus_id": 30,
+      "pg_mw": 250.0
+    },
+    {
+      "bus_id": 31,
+      "pg_mw": 563.0
+    },
+    {
+      "bus_id": 32,
+      "pg_mw": 650.0
+    },
+    {
+      "bus_id": 33,
+      "pg_mw": 632.0
+    },
+    {
+      "bus_id": 34,
+      "pg_mw": 508.0
+    },
+    {
+      "bus_id": 35,
+      "pg_mw": 650.0
+    },
+    {
+      "bus_id": 36,
+      "pg_mw": 560.0
+    },
+    {
+      "bus_id": 37,
+      "pg_mw": 540.0
+    },
+    {
+      "bus_id": 38,
+      "pg_mw": 830.0
+    }
+  ],
+  "shunt_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "expected_initial_characteristics": [
+    "power_flow_nonconvergence_or_severe_stress",
+    "excessive_slack_active_power_requirement",
+    "monitored_bus_voltage_violations"
+  ]
+}
