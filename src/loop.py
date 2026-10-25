@@ -1,4 +1,4 @@
-"""V7 progressive loop, with every method object persisted before/after execution."""
+"""Progressive loop, with every method object persisted before/after execution."""
 from pathlib import Path
 import json,time,datetime
 from schemas import OperatingState,data
@@ -67,7 +67,7 @@ def run_loop(network,initial_controls,solver,client,cfg,out_dir):
     # Explicit final black-box validation, independent of cached selected trial.
     state.pf=solver(state.controls)
     if status=='terminal_feasible' and identify_task(state,network,cfg).stage!='STOP':raise AssertionError('final_verification_failed')
-    result={'method_version':'V7','model_mode':'live_api' if client.is_live else 'scripted_engineering_not_LLM',
+    result={'model_mode':'live_api' if client.is_live else 'scripted_engineering_not_LLM',
         'status':status,'config':cfg,'initial_state':initial,'final_state':state,'final_metrics':state_metrics(state.pf,cfg),
         'events':events,'feedback':feedback,'stage_history':stages,'successful_api_calls':api_calls,
         'external_api_attempts':getattr(client,'attempts',0) if client.is_live else 0,

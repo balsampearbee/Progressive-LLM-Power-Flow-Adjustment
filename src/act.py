@@ -1,4 +1,4 @@
-"""V7: balance-sized P trials and exhaustive discrete Q validation after one decision."""
+""" balance-sized P trials and exhaustive discrete Q validation after one decision."""
 import copy
 from schemas import Config,LegalActionSpace,ActionCandidate,PFTrialResult,ActionSelectionResult,PFObservation
 from see import state_metrics,deviation,legal_directions,setting,remote_generators

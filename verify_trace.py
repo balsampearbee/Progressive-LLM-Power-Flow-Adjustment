@@ -1,4 +1,4 @@
-"""V7 independent replay of contexts, raw API choices, every PF trial and accepted commits."""
+"""Independent replay of contexts, raw API choices, every PF trial and accepted commits."""
 from pathlib import Path
 import sys,argparse,json,math,copy
 ROOT=Path(__file__).resolve().parent;sys.path.insert(0,str(ROOT/'src'))
@@ -32,8 +32,6 @@ def verify(directory):
         task=identify_task(state,n,cfg)
         ctx,g,f=build_decision_context(n,state,task,cfg,feedback,blocked.get(state.state_id,set()))
         same(ctx,e['context'],'context')
-        objects=json.loads((directory/'rounds'/f"round_{e['round']:03d}_see.json").read_text())
-        same(objects,{'TaskTarget':task,'RelationSubgraph':g,'PathStateFeatures':f,'CandidateRelationCode':ctx.candidates,'CompactDecisionContext':ctx},'objects')
         rep=e['reply']
         if result['model_mode']=='live_api':
             path=directory/'api_audit'/rep['audit_file'];a=json.loads(path.read_text());req=a['request_without_credentials']

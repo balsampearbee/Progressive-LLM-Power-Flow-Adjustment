@@ -1,4 +1,4 @@
-"""V7 policy tests. Synthetic PF doubles below are UNIT TESTS, never live evidence."""
+"""Action-policy tests. Synthetic PF doubles below are UNIT TESTS, never live evidence."""
 import sys,unittest,copy,tempfile
 from pathlib import Path
 from dataclasses import replace

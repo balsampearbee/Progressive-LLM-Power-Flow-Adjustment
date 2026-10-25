@@ -1,4 +1,4 @@
-"""Executable V7 method objects. All algorithm-facing PF fields are public outputs."""
+"""Executable method objects. All algorithm-facing PF fields are public outputs."""
 from __future__ import annotations
 from dataclasses import dataclass,field,asdict
 import hashlib,json

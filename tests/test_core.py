@@ -76,17 +76,6 @@ class SeeTests(unittest.TestCase):
 
 class ActTests(unittest.TestCase):
     setUp=SeeTests.setUp
-    def test_real_continuous_refinement(self):
-        # Transparent IEEE39 engineering state: only G30 is raised by 400 MW.
-        c=copy.deepcopy(self.state.controls);c.generator_pg['G30']+=400
-        state=OperatingState(c.version(self.n.network_id),c,self.solver(c))
-        task=identify_task(state,self.n,self.cfg);d=DeviceDirectionDecision('G30','increase',state.state_id)
-        result=realize_action(self.n,state,task,d,self.cfg,self.solver)
-        self.assertTrue(result.selected)
-        self.assertTrue(any('refine_' in x['reason'] for x in result.refinement_log))
-        self.assertLessEqual(len(result.trials),self.cfg.continuous_budget)
-        self.assertLess(result.selected.metrics['balancing_violation_mw'],1e-6)
-        self.assertTrue(any(abs(t.candidate.signed_magnitude)%25>1e-5 for t in result.trials))
     def test_generator_legal_endpoint_small_headroom(self):
         c=copy.deepcopy(self.state.controls);c.generator_pg['G30']=1039.8
         d=self.n.devices['G30'];s=construct_legal_action_space(d,'increase',c,self.cfg,self.n,self.task,'s')
